@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 	<meta charset='UTF-8'>
+    <title>Пример</title>
 
 	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
 	
@@ -33,6 +34,10 @@
 			display: none;
 		}
 
+        .form label {
+            display: none;
+        }
+        
 		.form input {
 			outline: none;
 			display: block;
@@ -68,22 +73,27 @@
     <h1>Second chance</h1>
 	<form action="#" class="form">
 		<div class="form__field">
-			<input type="text" name="name" placeholder="Имя*" required autocomplete="name" autofocus />
+            <label for="name">Имя*</label>
+			<input id="name" type="text" name="name" placeholder="Имя*" required autocomplete="name" autofocus />
 		</div>
 		<div class="form__field">
-			<input type="email" name="email" placeholder="E-Mail" autocomplete="email" />
+            <label for="email">E-Mail</label>
+			<input id="email" type="email" name="email" placeholder="E-Mail" autocomplete="email" />
 			<span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
 		</div>
 		<div class="form__field">
-			<input type="tel" name="mobile" placeholder="Телефон" pattern="[\+]\d{1}\d{1}\d{1}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="19" maxlength="19" autocomplete="tel" />
+            <label for="mobile">Телефон</label>
+			<input id="mobile" type="tel" name="mobile" placeholder="Телефон" pattern="[\+]\d{1}\d{1}\d{1}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="19" maxlength="19" autocomplete="tel" />
 			<span class="form__error">Это поле должно содержать телефон в формате +380 (67) 555-55-55</span>
 		</div>
 		<div class="form__field">
-			<input type="url" name="name" placeholder="Ваш сайт" autocomplete="email"/>
+            <label for="url">Ваш сайт</label>
+			<input id="url" type="url" name="name" placeholder="Ваш сайт" autocomplete="url"/>
 			<span class="form__error">Это поле должно содержать URL в формате http://mysite.ru</span>
 		</div>
 		<div class="form__field">
-			<input type="number" name="name" placeholder="Ваш рост (см)" min="100" max="250" />
+            <label for="height">Ваш рост (см)</label>
+			<input id="height" type="number" name="height" placeholder="Ваш рост (см)" min="100" max="250" />
 			<span class="form__error">Ваш рост должен быть не меньше 100 и не больше 250 см</span>
 		</div>
 		<button type="submit">Отправить 2</button>
